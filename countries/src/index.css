@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.card{
+  width: 15em;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5%;
+  margin: 1em;
+}
+
+.visited{
+  background-color: rgb(211, 161, 34);
+}
