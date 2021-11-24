@@ -20,6 +20,17 @@ code {
   margin: 1em;
 }
 
-.visited{
+.card-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.flags{
+  max-width: 2em;
+}
+
+.onvisited{
   background-color: rgb(211, 161, 34);
 }
