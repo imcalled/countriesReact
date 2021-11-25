@@ -1,4 +1,6 @@
-const CountryCard = ({card, onVisited}) => {
+import VisitedButton from "./VisitedButton";
+
+const CountryCard = ({card, updateVisitedList, onVisited}) => {
     
     // const mapCountry = card.map(countryProperties => {
     //     return(
@@ -6,36 +8,31 @@ const CountryCard = ({card, onVisited}) => {
     //     )
     // })
 
+    //Add visited key to each card
+    card[0]["visited"] = false;
+
     const renderLanguagesList = Object.values(card[0].languages).map((language, id)=> {
         return (
             <p key={language.id}>{language}</p>
         )
       });
 
-      const renderCurrencies = Object.values(card[0].currencies).map((currencies, id)=> {
-        return (
-            <p key={currencies.id}>{currencies.name}</p>
-        )
-      });
+    const renderCurrencies = Object.values(card[0].currencies).map((currencies, id)=> {
+    return (
+        <p key={currencies.id}>{currencies.name}</p>
+    )
+    });
 
 
-    // const landlockedBorders = () => {
-    //     return(
-            
-    //         // card[0].borders == undefined ?
-    //         <p>Country is an Island</p>
-    //         :
-    //         <>
-    //             <p>{card[0].landlocked ? "Landlocked" : "Coastal"}</p>
-    //             <h4>Borders:</h4>
-    //             <p>{card[0].landlocked ? card[0].borders : "The sea :)"}</p>
-    //         </>
-    //     )
-    // }
+    for (var i = 0; i<5; i++){
+        var cards = card[i];
 
+    // updateVisitedList(card[0].name.common);
+         
     return (
   
-        <div className={card ? "Visited here" : "Bucket List"}>
+        <div className="card" >
+    
         
             {/* <h3>{card}</h3> */}
             {/* <h3>Object.entries(name)</h3> */}
@@ -66,9 +63,17 @@ const CountryCard = ({card, onVisited}) => {
             <p>{card.visited ? "Yes!" : "Bucket List"}</p> */}
             <hr/>
             {/* TODO:  change onVisited state to true, change background to green*/}
-            <button onClick={() => onVisited(card.id)}>Mark visited</button>
+            <h3> Visited?</h3>
+            <p>{card[0].visited ? "Yes" : "Not yet"}</p>
+            
+            {/* <VisitedButton updateVisitedList={updateVisitedList}/> */}
+
+
+            <button id="visitbtn" onClick={() => updateVisitedList(card[0].name.common)}>Already Visited</button>
+
         </div>
-    )
+            )}
+    
 }
 
 export default CountryCard;

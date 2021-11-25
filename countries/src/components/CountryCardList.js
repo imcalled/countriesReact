@@ -1,10 +1,11 @@
 import CountryCard from "./CountryCard";
 
-const CountryCardList = ({countryCards, onVisited}) => {
+const CountryCardList = ({countryCards, updateVisitedList}) => {
 
     const cardComponents = countryCards.map(countryCard => {
         return(
-            <CountryCard card={countryCard} key={countryCard.id} onVisited={onVisited}/>
+            <CountryCard card={countryCard} key={countryCard.id} updateVisitedList={updateVisitedList}/>
+            // <CountryCard card={countryCard} key={countryCard.id} onVisited={onVisited}/>
         )
     })
 

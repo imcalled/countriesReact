@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  padding: 0em;
+  font-family:  'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -16,8 +17,11 @@ code {
   width: 15em;
   text-align: center;
   border: 1px solid black;
-  border-radius: 5%;
+  border-radius: 10%;
   margin: 1em;
+  background-color: bisque;
+  padding: 0;
+  font-size: small;
 }
 
 .card-list{
@@ -32,5 +36,32 @@ code {
 }
 
 .onvisited{
-  background-color: rgb(211, 161, 34);
+  background-color: rgb(69, 202, 69);
+}
+
+
+.h4{
+  padding: 0em;
+  margin: 0cm;
+  border-radius: 0%;
+}
+
+.p{
+  padding: 0em;
+  margin: 0cm;
+}
+
+
+#visitbtn{
+  margin: 0.5em;
+  color:darkgreen;
+  background-color: aquamarine;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#visitbtn:focus{
+  background-color: blueviolet;
+  color: bisque;
 }
