@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80%22");
 }
 
 code {
@@ -16,8 +17,12 @@ code {
   width: 15em;
   text-align: center;
   border: 1px solid black;
-  border-radius: 5%;
+  border-radius: 10%;
   margin: 1em;
+  background-color: bisque;
+  padding: 0;
+  font-size: small;
+  box-shadow: 5px 10px #888888;
 }
 
 .card-list{
@@ -33,4 +38,63 @@ code {
 
 .onvisited{
   background-color: rgb(211, 161, 34);
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+
+input[type="submit"] {
+  padding: 5px;
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  width: 80px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+
+input[type="submit"]:hover {
+  background-color: #282c34;
+  color: antiquewhite;
+}
+
+
+.search > input[type="text"]{
+  width: 40%;
+  min-width: 170px;
+}
+
+#visitbtn{
+  margin: 0.5em;
+  color:darkgreen;
+  background-color: aquamarine;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#visitbtn:focus{
+  background-color: blueviolet;
+  color: bisque;
+}
+
+#deletebtn{
+  margin: 0.5em;
+  color:rgb(34, 34, 32);
+  background-color: rgb(233, 59, 59);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#deletebtn:focus{
+  background-color: rgb(131, 24, 24);
+  color: bisque;
 }
