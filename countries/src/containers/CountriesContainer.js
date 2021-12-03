@@ -51,11 +51,12 @@ const CountriesContainer = ({onVisited}) => {
 
         console.log(JSON.stringify(searchCountry));
         //append new search
-        var updatedCountries = 0;
-        if(countryCard != []) {
-            updatedCountries = [...countryCard, searchCountry];
-        }
-        else {return updatedCountries = searchCountry};
+        // var updatedCountries = 0;
+        // if(countryCard != []) {
+        //     updatedCountries = [...countryCard, searchCountry];
+        // }
+        // else {return updatedCountries = searchCountry};
+        var updatedCountries = [...countryCard, searchCountry];
         setCountryCard(updatedCountries);
 
         // console.log(JSON.stringify(countryCard));
@@ -96,8 +97,13 @@ const CountriesContainer = ({onVisited}) => {
             return (countries.name.common).toLowerCase() === name.toLowerCase();
         });
 
-        const updateWithDeletedCountries = countryCard.pop(deleteCountry);
+        const index = countryCard.indexOf(deleteCountry);
+        console.log(index);
+        const updateWithDeletedCountries = [...countryCard.splice(index, 1)];
+        console.log(updateWithDeletedCountries);
         setCountryCard(updateWithDeletedCountries);
+        // const deleteCountry = countryCard.filter(country=> country.name.common!==name);
+        // setCountryCard(deleteCountry);
     }
 
     return (
